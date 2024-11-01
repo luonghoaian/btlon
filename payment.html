@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav-logo">
+                <p>CafedeLiem</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="login.html" class="link">TRANG CHỦ</a></li>
+                    <li><a href="menu.html" class="link">MENU</a></li>
+                    <li><a href="introduce.html" class="link">GIỚI THIỆU</a></li>
+                    <li><a href="sale.html" class="link">KHUYẾN MẠI</a></li>
+                    <li><a href="payment.html" class="link">THANH TOÁN</a></li>
+                </ul>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <form action="">
+            <h3 style="text-align: center;">HÌNH THỨC THANH TOÁN</h3>
+            <div class="payment-methods" style="text-align: center;">
+                <input type="radio" name="phuongthucthanhtoan" value="chuyenkhoan" id="chuyenkhoan" />
+                <label for="chuyenkhoan">CHUYỂN KHOẢN</label>
+                <input type="radio" name="phuongthucthanhtoan" value="tienmat" id="tienmat" />
+                <label for="tienmat">TIỀN MẶT</label>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Địa chỉ thanh toán</h3>
+                    <div class="inputBox">
+                        <span>Tên khách hàng :</span>
+                        <input type="text" placeholder="Nguyễn Văn A">
+                    </div>
+                    <div class="inputBox">
+                        <span>Số điện thoại :</span>
+                        <input type="email" placeholder="VD : 09783426752">
+                    </div>
+                    <div class="inputBox">
+                        <span>Địa chỉ :</span>
+                        <input type="text" placeholder="Số nhà - Đường - Phường - Quận">
+                    </div>
+                    <div class="inputBox">
+                        <span>Thành phố :</span>
+                        <input type="text" placeholder="VD : Hà Nội">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Quốc gia :</span>
+                            <input type="text" placeholder="VD : Việt Nam">
+                        </div>
+                        <div class="inputBox">
+                            <span>Mã Zip :</span>
+                            <input type="text" placeholder="VD : 123 456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3 class="title">Thông tin thanh toán</h3>
+                    <div class="inputBox">
+                        <span>Thẻ được chấp nhận :</span>
+                        <div class="payment-options">
+                            <div class="payment-option" data-method="visa"></div>
+                            <div class="payment-option" data-method="mastercard"></div>
+                            <div class="payment-option" data-method="paypal"></div>
+                            <div class="payment-option" data-method="amex"></div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <span>Tên trên thẻ :</span>
+                        <input type="text" placeholder="VD : Nguyễn Văn A">
+                    </div>
+                    <div class="inputBox">
+                        <span>Số thẻ tín dụng :</span>
+                        <input type="number" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputBox">
+                        <span>Tháng hết hạn :</span>
+                        <input type="text" placeholder="VD : 10">
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Năm hết hạn :</span>
+                            <input type="number" placeholder="VD : 2022">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button">
+                <button onclick="myFunction()" class="submit-btn">Thanh toán</button>
+            </div>
+        </form>
+    </div>
+    <script src="payment.js" defer></script>
+</body>
+
+</html>
